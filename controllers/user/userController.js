@@ -9,6 +9,18 @@ const loadHomepage=async(req,res)=>{
     }
 }
 
+const pageNotFound= async(req,res)=>{
+    try {
+
+        return res.render('404Notfound');
+        
+    } catch (error) {
+        
+        res.redirect("/pagenotfound");
+    }
+}
+
 module.exports={
-    loadHomepage
+    loadHomepage,
+    pageNotFound
 }
